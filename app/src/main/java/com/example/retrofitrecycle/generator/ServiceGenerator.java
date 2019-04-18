@@ -1,4 +1,4 @@
-package com.example.retrofitrecycle;
+package com.example.retrofitrecycle.generator;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -17,7 +17,6 @@ public class ServiceGenerator {
                     .setLevel(HttpLoggingInterceptor.Level.BODY);
     private static OkHttpClient.Builder httpClient =
             new OkHttpClient.Builder();
-
     public static void changeApiBaseUrl(String newApiBaseUrl) {
         BASE_URL = newApiBaseUrl;
         builder = new Retrofit.Builder()
